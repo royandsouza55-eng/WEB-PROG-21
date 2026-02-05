@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Stylized To-Do List</title>
+<style>
+a.sub-item-link:link {text-decoration: none;color: #2e7d32;}
+a.sub-item-link:visited {color: #7b1fa2;}
+a.sub-item-link:hover {color: #d32f2f;}
+a.sub-item-link:focus {outline: 3px solid #ffeb3b;}
+a.sub-item-link:active {color: #1976d2;}
+body {padding: 50px;font-family: sans-serif;background-color: #f0f0f0;}
+.todo-list {list-style: none;background: white;padding: 30px;border-radius: 5px;max-width: 350px;}
+.sub-item {margin-bottom: 15px;}
+</style>
+</head>
+<body>
+<ul class="todo-list">
+<li>
+<input type="checkbox" id="check1">
+<label for="check1">Review Project Specs</label>
+<ul class="sub-item">
+<li><a href="https://google.com" class="sub-item-link" target="_blank">Search Specs</a></li>
+</ul>
+</li>
+<li>
+<input type="checkbox" id="check2">
+<label for="check2">Update Portfolio Site</label>
+<ul class="sub-item">
+<li><a href="https://github.com" class="sub-item-link" target="_blank">Open Repository</a></li>
+</ul>
+</li>
+<li>
+<input type="checkbox" id="check3">
+<label for="check3">Email Stakeholders</label>
+<ul class="sub-item">
+<li><a href="https://gmail.com" class="sub-item-link" target="_blank">Open Mail</a></li>
+</ul>
+</li>
+<li>
+<input type="checkbox" id="check4">
+<label for="check4">Finalize UI Styling</label>
+<ul class="sub-item">
+<li><a href="https://codepen.io" class="sub-item-link" target="_blank">Demo Styles</a></li>
+</ul>
+</li>
+</ul>
+</body>
+</html>

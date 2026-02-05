@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Form</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f2f8; /* pastel light purple */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      padding: 12px 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #7da0f7; /* pastel blue focus */
+      box-shadow: 0 0 5px rgba(125, 160, 247, 0.5);
+      outline: none;
+    }
+
+    input:invalid,
+    select:invalid,
+    textarea:invalid {
+      border-color: #ff6b6b; /* pastel red for invalid */
+    }
+
+    input:valid,
+    select:valid,
+    textarea:valid {
+      border-color: #6bcf91; /* pastel green for valid */
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #a0d8ef; /* pastel blue button */
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #78c0e0;
+      transform: translateY(-2px);
+    }
+
+    /* Radio buttons styling */
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin: 10px 0;
+    }
+
+    .radio-group input[type="radio"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      margin-right: 8px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .radio-group input[type="radio"]:checked {
+      border-color: #7da0f7;
+      background-color: #a0d8ef;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .radio-group input[type="radio"] + label {
+      cursor: pointer;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .radio-group input[type="radio"]:checked + label {
+      color: #7da0f7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+
+    <label for="position">Position</label>
+    <select id="position" required>
+      <option value="">Select Position</option>
+      <option value="dev">Developer</option>
+      <option value="designer">Designer</option>
+      <option value="pm">Project Manager</option>
+    </select>
+
+    <fieldset class="radio-group">
+      <input type="radio" id="ft" name="availability" value="ft">
+      <label for="ft">Full-Time</label>
+
+      <input type="radio" id="pt" name="availability" value="pt">
+      <label for="pt">Part-Time</label>
+    </fieldset>
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

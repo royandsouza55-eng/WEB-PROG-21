@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+
+<style>
+:root {
+  --primary-color: #2b2d42;
+  --secondary-color: #8d99ae;
+  --light-bg: #edf2f4;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+#navbar a:hover {
+  color: #80cbc4;
+}
+
+/* WELCOME */
+#welcome-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #26a69a, #80cbc4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+#welcome-section h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 6px solid var(--secondary-color);
+  object-fit: contain;
+  background: white;
+
+
+}
+
+/* SKILLS */
+#skills {
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+/* PROJECTS */
+#projects {
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-tile {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.project-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-tile a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* CONTACT */
+#contact {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+footer {
+  background: #00332b;
+  color: #80cbc4;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <div class="nav-container">
+    <div style="font-weight:bold;font-size:1.2em;">Devfolio</div>
+    <div>
+      <a href="#welcome-section">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="welcome-section">
+  <h1>Hi, I'm Royan D’Souza</h1>
+  <p>AIML Student | Roll No: 21 | AIML Class</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <div class="about-image">
+      <!-- WORKING ONLINE IMAGE -->
+	<img src="https://www.clipartmax.com/png/middle/206-2067523_man-face-roblox-roblox-faces.png" alt="Roblox Man Face">
+    </div>
+    <div>
+      <p>
+        I am an enthusiastic AIML student with a strong interest in technology and problem-solving.
+        I enjoy building simple, clean, and functional applications while continuously learning new tools.
+      </p>
+      <p>
+        Beyond academics, I love <strong>playing football ⚽, creating art 🎨, and travelling 🌍</strong>.
+        These hobbies keep me creative, active, and curious.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-container">
+    <div class="skill-badge">HTML</div>
+    <div class="skill-badge">CSS</div>
+    <div class="skill-badge">JavaScript</div>
+    <div class="skill-badge">Python</div>
+    <div class="skill-badge">AI & ML Basics</div>
+    <div class="skill-badge">Git & GitHub</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-tile">
+      <img src="https://img.freepik.com/free-vector/chatbot-concept-illustration_114360-5522.jpg" alt="AI Chatbot for Farmers">
+      <a href="#">AI Chatbot for Farmers</a>
+    </div>
+
+    <div class="project-tile">
+      <img src="https://img.freepik.com/free-vector/weather-concept-illustration_114360-1236.jpg" alt="AI Weather Forecast">
+      <a href="#">AI Weather Forecast System</a>
+    </div>
+
+    <div class="project-tile">
+      <img src="https://img.freepik.com/free-vector/artificial-intelligence-concept-illustration_114360-1130.jpg" alt="AI Crop Recommendation">
+      <a href="#">AI Crop Recommendation System</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's Connect</h2>
+  <p>Open to learning, collaborations, and new opportunities.</p>
+</section>
+
+<footer>
+  © 2026 Royan D’Souza. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set of Colored Boxes</title>
+
+  <style>
+    body {
+      background-color: #FFFACD;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .color-grid {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .color-box {
+      width: 130px;       /* increased width */
+      height: 130px;      /* increased height */
+      border-radius: 15px; /* rounded corners */
+      transition: transform 0.2s;
+    }
+
+    .color-box:hover {
+      transform: scale(1.1); /* slight zoom on hover */
+    }
+
+    /* Hexadecimal color */
+    .color1 {
+      background-color: #FF0000;
+    }
+
+    /* RGB color */
+    .color2 {
+      background-color: rgb(52, 152, 219);
+    }
+
+    /* Predefined color */
+    .color3 {
+      background-color: yellow;
+    }
+
+    /* HSL color */
+    .color4 {
+      background-color: hsl(120, 60%, 50%);
+    }
+
+    /* Any background color */
+    .color5 {
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>COLOR BOX</h1>
+
+  <div class="color-grid">
+    <div class="color-box color1"></div>
+    <div class="color-box color2"></div>
+    <div class="color-box color3"></div>
+    <div class="color-box color4"></div>
+    <div class="color-box color5"></div>
+  </div>
+
+</body>
+</html>
